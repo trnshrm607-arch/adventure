@@ -1,0 +1,155 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #101820, #162b20);
+    color: white;
+    padding: 20px;
+}
+
+.game-container {
+    width: min(95vw, 460px);
+    text-align: center;
+    padding: 24px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    margin-bottom: 18px;
+    font-size: 38px;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 18px;
+}
+
+.score-board div {
+    flex: 1;
+    padding: 10px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.score-board span {
+    display: block;
+    font-size: 13px;
+    color: #b8c7bd;
+    margin-bottom: 4px;
+}
+
+.score-board strong {
+    font-size: 24px;
+}
+
+canvas {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+    border: 3px solid #4caf50;
+    border-radius: 12px;
+    background: #08110b;
+    box-shadow: 0 0 25px rgba(76, 175, 80, 0.25);
+}
+
+.message {
+    margin: 15px 0;
+    min-height: 58px;
+}
+
+.message h2 {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.message p {
+    color: #b8c7bd;
+}
+
+.controls {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.controls button {
+    flex: 1;
+    border: none;
+    border-radius: 10px;
+    padding: 13px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    color: white;
+    background: #2e7d32;
+    transition: 0.2s;
+}
+
+.controls button:hover {
+    background: #388e3c;
+    transform: translateY(-1px);
+}
+
+.controls button:active {
+    transform: scale(0.97);
+}
+
+.mobile-controls {
+    margin-top: 20px;
+    display: none;
+}
+
+.mobile-controls button {
+    width: 55px;
+    height: 45px;
+    margin: 3px;
+    border: none;
+    border-radius: 10px;
+    background: #285b30;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.mobile-controls button:active {
+    background: #3d8b48;
+}
+
+.instructions {
+    margin-top: 18px;
+    font-size: 13px;
+    color: #9eaaa2;
+}
+
+@media (max-width: 600px) {
+    .game-container {
+        padding: 16px;
+    }
+
+    h1 {
+        font-size: 32px;
+    }
+
+    .mobile-controls {
+        display: block;
+    }
+
+    .instructions {
+        display: none;
+    }
+}
